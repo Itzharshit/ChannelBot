@@ -8,4 +8,4 @@ RUN git clone https://github.com/Itzharshit/ChannelBot
 RUN cd ChannelBot
 WORKDIR /ChannelBot
 RUN pip3 install -U -r requirements.txt
-CMD python3 main.py
+CMD python3 channelbot.py
