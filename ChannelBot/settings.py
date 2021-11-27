@@ -46,7 +46,7 @@ async def channel_settings(channel_id, bot):
                 InlineKeyboardButton(f'Caption', callback_data=f'change+caption+{channel_id}'),
                 InlineKeyboardButton(f'Buttons', callback_data=f'change+buttons+{channel_id}')
             ],
-            [InlineKeyboardButton(f'}Caption Mode : {position.capitalize()}', callback_data=f'change+position+{channel_id}+{position}')],
+            [InlineKeyboardButton(f'Caption Mode : {position.capitalize()}', callback_data=f'change+position+{channel_id}+{position}')],
             [InlineKeyboardButton(f'Sticker', callback_data=f'change+sticker+{channel_id}'),
              InlineKeyboardButton(f'Edit Mode : {edit_mode.capitalize()}', callback_data=f'change+edit_mode+{channel_id}+{edit_mode}')],
             [InlineKeyboardButton(f'Webpage Preview : {webpage_preview}', callback_data=f'change+webpage_preview+{channel_id}+{webpage_preview}')],
