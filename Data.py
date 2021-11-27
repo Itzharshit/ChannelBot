@@ -4,59 +4,41 @@ from pyrogram.types import InlineKeyboardButton
 class Data:
     # Start Message
     START = """
-Hey {}
+Hii {}
 
-Welcome to {}
+I am Auto Captions Injector bot created by @pyrogrammers.
+I can automatically add Captions with buttons to every post of your channel.
+I can also add stickers after every post.
+Hit /help to know how to use me.
 
-You can use me to manage channels with tons of features. Use below buttons to learn more !
-
-By @StarkBots
+𝗜𝗳 𝘆𝗼𝘂 𝗹𝗶𝗸𝗲 𝘁𝗵𝗶𝘀 𝗯𝗼𝘁 𝗮𝗻𝗱 𝘄𝗮𝗻𝘁 𝘁𝗼 𝗵𝗲𝗹𝗽 𝗱𝗲𝘃𝗹𝗼𝗽𝗲𝗿 𝗽𝗹𝗲𝗮𝘀𝗲 𝘀𝘂𝗯𝘀𝗰𝗿𝗶𝗯𝗲 𝗺𝘆 𝘆𝗼𝘂𝘁𝘂𝗯𝗲 𝗰𝗵𝗮𝗻𝗻𝗲𝗹.
     """
 
     # Home Button
     home_buttons = [
-        [InlineKeyboardButton(text="🏠 Return Home 🏠", callback_data="home")],
+        [InlineKeyboardButton(text="𝗠𝗮𝗶𝗻 𝗺𝗲𝗻𝘂", callback_data="home")],
     ]
 
     # Rest Buttons
     buttons = [
-        [InlineKeyboardButton("✨ Bot Status and More Bots ✨", url="https://t.me/StarkBots/7")],
+        [InlineKeyboardButton("📺 𝗠𝘆 𝗬𝗼𝘂𝗧𝘂𝗯𝗲 𝗖𝗵𝗮𝗻𝗻𝗲𝗹", url="https://youtube.com/channel/UC2anvk7MNeNzJ6B4c0SZepw")],
         [
-            InlineKeyboardButton("How to Use ❔", callback_data="help"),
-            InlineKeyboardButton("🎪 About 🎪", callback_data="about")
+            InlineKeyboardButton("📢 𝗠𝘆 𝗖𝗵𝗮𝗻𝗻𝗲𝗹", url="https://t.me/pyrogrammers"),
+            InlineKeyboardButton("🎎 𝗠𝘆 𝗚𝗿𝗼𝘂𝗽", url="https://t.me/+7ScFy39Vckk5MWQ1")
         ],
-        [InlineKeyboardButton("♥ More Amazing bots ♥", url="https://t.me/StarkBots")],
-        [InlineKeyboardButton("🎨 Support Group 🎨", url="https://t.me/StarkBotsChat")],
     ]
 
     # Help Message
     HELP = """
-Everything is self explanatory after you add a channel.
-To add a channel use keyboard button 'Add Channels' or alternatively for ease, use `/add` command
-
-✨ **Available Commands** ✨
-
-/about - About The Bot
+ **Available Commands** 
 /help - This Message
-/start - Start the Bot
+/start - Check bot Is alive or not
 
-Alternative Commands
-/channels - List added Channels
-/add - Add a channel
-/report - Report a Problem
+More Commands
+/channels - List of all your Channels
+/add - Add a new channel
+/report - Report Problems
     """
 
     # About Message
-    ABOUT = """
-**About This Bot** 
-
-A telegram channel automation bot by @StarkBots
-
-Source Code : [Click Here](https://github.com/StarkBotsIndustries/ChannelBot)
-
-Framework : [Pyrogram](docs.pyrogram.org)
-
-Language : [Python](www.python.org)
-
-Developer : @StarkProgrammer
-    """
+    ABOUT = """ """
