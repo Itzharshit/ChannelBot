@@ -5,15 +5,15 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 @Client.on_message(filters.regex(r'^Report a Problem$') | filters.command('report'))
 async def _manage(_, msg):
     how = '**Report a Problem** \n\n'
-    how += "If something **unexpected** happens, you can report it to us. (You can also suggest features.)\n\n"
-    how += '**Steps** \n'
-    how += '1) Try whatever you did again. If it shows the same unexpected thing, move to step 2 \n'
-    how += '2) Visit @StarkBotsChat and define your problem **completely**, i.e, what you expected and what happened instead.'
-    how += "If you don't get a reply, tag an admin."
+    how += "If you are facing any issue in this bot then you can report it to us.\n\n"
+    how += '**Steps you have to follow** \n'
+    how += 'Capture screenshot of problem you are facing in this bot. \n'
+    how += 'Go to pyrogramers groups and explain your problem briefly.'
+    how += "If you don't get a reply, ping @admin."
     await msg.reply(
         how,
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton('Support Group', url='https://t.me/StarkBotsChat')]
+            [InlineKeyboardButton('Pyrogrammers Group', url='https://t.me/+7ScFy39Vckk5MWQ1')]
         ]),
         quote=True
     )
