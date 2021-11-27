@@ -13,9 +13,9 @@ async def _add_channels(bot: Client, msg):
     bot_id = (await bot.get_me()).id
     try:
         channel = await bot.ask(user_id,
-                                "Please add me as **admin** with atleast 'Post Messages' and 'Edit message of others' rights to the desired channel "
+                                "Please promote me as **admin** with atleast 'Post Messages' and 'Edit message of others' rights to your channel. "
                                 "\n\nAfter that, forward a message from the channel. "
-                                "\n\nCancel this process using /cancel. If their is no reply in 5 minutes, action will be auto cancelled.", timeout=300)
+                                "\n\nCancel this process using /cancel. If their is no reply in 5 minutes, action will be automatically cancelled.", timeout=300)
         while True:
             if channel.forward_from_chat:
                 if channel.forward_from_chat.type == 'channel':
@@ -41,7 +41,7 @@ async def _add_channels(bot: Client, msg):
                                 else:
                                     await uac(user_id, channel_id)
                                     await cac(channel_id, user_id)
-                                    await channel.reply("Thanks for choosing me. Now start managing this channel by customizing settings sent below.", quote=True)
+                                    await channel.reply("Thanks for using this bot. Now start managing this channel by customizing settings sent below.", quote=True)
                                     text, markup, _ = await channel_settings(channel_id, bot)
                                     if text:
                                         await msg.reply(text, reply_markup=InlineKeyboardMarkup(markup))
@@ -49,7 +49,7 @@ async def _add_channels(bot: Client, msg):
                                         await channel.reply('Channel Not Found. Please add again !')
                                         await remove_channel(channel_id)
                             else:
-                                text = "I'm admin but you are not an admin there. I can't allow this."
+                                text = "I'm admin but you are not an admin of this channel. I can't allow this."
                                 await channel.reply(text, quote=True)
                             break
                         else:
@@ -69,4 +69,4 @@ async def _add_channels(bot: Client, msg):
                     text = 'Please forward a channel message or /cancel the process.'
                     channel = await bot.ask(user_id, text, timeout=300, reply_to_message_id=channel.message_id, filters=~filters.me)
     except asyncio.exceptions.TimeoutError:
-        await msg.reply('Process has been automatically cancelled', quote=True)
+        await msg.reply('Oops! Process cancelled due to timeout.', quote=True)
