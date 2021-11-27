@@ -17,7 +17,7 @@ async def _manage(bot: Client, msg):
 async def manage_channels(user_id, bot: Client):
     status, channels = await get_channels(user_id)
     if status:
-        text = 'Below are your channels.'
+        text = 'Here are your Channels.'
         buttons = []
         for channel in channels:
             chat = await bot.get_chat(channel)
@@ -27,4 +27,4 @@ async def manage_channels(user_id, bot: Client):
         buttons = [
                 ['+ Add Channels +']
         ]
-        return False, buttons, 'No Channels Found. Add a channel using below keyboard button'
+        return False, buttons, 'No Channels Found. Add a channel using below button'
