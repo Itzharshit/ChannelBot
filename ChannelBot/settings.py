@@ -43,7 +43,7 @@ async def channel_settings(channel_id, bot):
             webpage_preview = 'False'
         markup = [
             [
-                InlineKeyboardButton(f'{emoji.AB_BLOOD}Caption', callback_data=f'change+caption+{channel_id}'),
+                InlineKeyboardButton(f'{emoji.MEMO}Caption', callback_data=f'change+caption+{channel_id}'),
                 InlineKeyboardButton(f'{emoji.KEYBOARD}Buttons', callback_data=f'change+buttons+{channel_id}')
             ],
             [InlineKeyboardButton(f'{emoji.UPDATE}Caption Mode : {position.capitalize()}', callback_data=f'change+position+{channel_id}+{position}')],
