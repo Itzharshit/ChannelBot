@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
-@Client.on_message(filters.regex(r'^Report a Problem$') | filters.command('report'))
+@Client.on_message(filters.regex(r'^✉️ Submit Issue$') | filters.command('report'))
 async def _manage(_, msg):
     how = '**Report a Problem** \n\n'
     how += "If you are facing any issue in this bot then you can report it to us.\n\n"
