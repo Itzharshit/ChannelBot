@@ -14,8 +14,8 @@ async def _add_channels(bot: Client, msg):
     try:
         channel = await bot.ask(user_id,
                                 "Please promote me as **admin** with atleast 'Post Messages' and 'Edit message of others' rights to your channel. "
-                                "\n\nAfter that, forward a message from the channel. "
-                                "\n\nCancel this process using /cancel. If their is no reply in 5 minutes, action will be automatically cancelled.", timeout=300)
+                                "\n\nAfter that, forward a message from your channel to me. "
+                                "\n\nCancel this process by hitting /cancel. If you don't forward any message to me within 5 minutes, process will be automatically terminated.", timeout=300)
         while True:
             if channel.forward_from_chat:
                 if channel.forward_from_chat.type == 'channel':
