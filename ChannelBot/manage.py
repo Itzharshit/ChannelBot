@@ -25,6 +25,6 @@ async def manage_channels(user_id, bot: Client):
         return True, buttons, text
     else:
         buttons = [
-                ['📢 Add channels']
+                ['📢 Add Channels']
         ]
         return False, buttons, 'No Channels Found. Add a channel using below button'
