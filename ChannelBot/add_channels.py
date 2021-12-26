@@ -40,7 +40,7 @@ async def _add_channels(bot: Client, msg):
                                 else:
                                     await uac(user_id, channel_id)
                                     await cac(channel_id, user_id)
-                                    await channel.reply("Please join @pyrogrammers for awesome bots.start managing this channel by customizing settings sent below.", quote=True)
+                                    await channel.reply("Please join @pyrogrammers for awesome bots.\nStart managing this channel by customizing settings sent below.", quote=True)
                                     text, markup, _ = await channel_settings(channel_id, bot)
                                     if text:
                                         await msg.reply(text, reply_markup=InlineKeyboardMarkup(markup))
