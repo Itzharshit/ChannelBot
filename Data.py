@@ -5,7 +5,6 @@ class Data:
     # Start Message
     START = """
 Hii {}
-
 I am Auto Captions Injector bot created by @pyrogrammers.
 I can automatically add Captions with buttons to every post of your channel.
 I can also add stickers after every post.
