@@ -43,15 +43,15 @@ async def channel_settings(channel_id, bot):
             webpage_preview = 'False'
         markup = [
             [
-                InlineKeyboardButton(f'Caption', callback_data=f'change+caption+{channel_id}'),
-                InlineKeyboardButton(f'Buttons', callback_data=f'change+buttons+{channel_id}')
+                InlineKeyboardButton(f'🆎 𝗖𝗮𝗽𝘁𝗶𝗼𝗻', callback_data=f'change+caption+{channel_id}'),
+                InlineKeyboardButton(f'⌨️ 𝗕𝘂𝘁𝘁𝗼𝗻𝘀', callback_data=f'change+buttons+{channel_id}')
             ],
-            [InlineKeyboardButton(f'Caption Mode : {position.capitalize()}', callback_data=f'change+position+{channel_id}+{position}')],
-            [InlineKeyboardButton(f'Sticker', callback_data=f'change+sticker+{channel_id}'),
-             InlineKeyboardButton(f'Edit Mode : {edit_mode.capitalize()}', callback_data=f'change+edit_mode+{channel_id}+{edit_mode}')],
-            [InlineKeyboardButton(f'Webpage Preview : {webpage_preview}', callback_data=f'change+webpage_preview+{channel_id}+{webpage_preview}')],
-            [InlineKeyboardButton(f'Remove Channel', callback_data=f'remove+{channel_id}')],
-            [InlineKeyboardButton('🔙 Back', callback_data='home+channels')]
+            [InlineKeyboardButton(f'⚙️ 𝗖𝗮𝗽𝘁𝗶𝗼𝗻 𝗠𝗼𝗱𝗲 : {position.capitalize()}', callback_data=f'change+position+{channel_id}+{position}')],
+            [InlineKeyboardButton(f'🖼 𝗦𝘁𝗶𝗰𝗸𝗲𝗿', callback_data=f'change+sticker+{channel_id}'),
+             InlineKeyboardButton(f'🖊 𝗘𝗱𝗶𝘁 𝗠𝗼𝗱𝗲 : {edit_mode.capitalize()}', callback_data=f'change+edit_mode+{channel_id}+{edit_mode}')],
+            [InlineKeyboardButton(f'💻 𝗪𝗲𝗯𝗽𝗮𝗴𝗲 𝗣𝗿𝗲𝘃𝗶𝗲𝘄 : {webpage_preview}', callback_data=f'change+webpage_preview+{channel_id}+{webpage_preview}')],
+            [InlineKeyboardButton(f'❌ 𝗥𝗲𝗺𝗼𝘃𝗲 𝗖𝗵𝗮𝗻𝗻𝗲𝗹', callback_data=f'remove+{channel_id}')],
+            [InlineKeyboardButton('🔙 𝗕𝗮𝗰𝗸', callback_data='home+channels')]
         ]
     else:
         text = None
