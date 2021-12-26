@@ -7,14 +7,14 @@ from ChannelBot.settings import channel_settings
 from pyrogram.types import InlineKeyboardMarkup
 
 
-@Client.on_message((filters.regex(r'^📢 Add Channels$') | filters.command('add')) & filters.private)
+@Client.on_message((filters.regex("📢 Add Channels") | filters.command('add')) & filters.private)
 async def _add_channels(bot: Client, msg):
     user_id = msg.from_user.id
     bot_id = (await bot.get_me()).id
     try:
         channel = await bot.ask(user_id,
                                 "Make me an admin in your channel and forward me a post from there."
-                                "\n\nYou can Cancel this process by hitting /cancel. If you don't forward any message to me within 5 minutes, process will be automatically terminated.", timeout=300)
+                                "\n\nYou can Cancel this process by hitting /cancel.", timeout=300)
         while True:
             if channel.forward_from_chat:
                 if channel.forward_from_chat.type == 'channel':
@@ -40,7 +40,7 @@ async def _add_channels(bot: Client, msg):
                                 else:
                                     await uac(user_id, channel_id)
                                     await cac(channel_id, user_id)
-                                    await channel.reply("Thanks for using this bot. Now start managing this channel by customizing settings sent below.", quote=True)
+                                    await channel.reply("Please join @pyrogrammers for awesome bots.start managing this channel by customizing settings sent below.", quote=True)
                                     text, markup, _ = await channel_settings(channel_id, bot)
                                     if text:
                                         await msg.reply(text, reply_markup=InlineKeyboardMarkup(markup))
